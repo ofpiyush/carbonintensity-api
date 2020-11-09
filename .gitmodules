@@ -1,0 +1,3 @@
+[submodule "electricitymap-contrib"]
+	path = electricitymapcontrib
+	url = git@github.com:tmrowco/electricitymap-contrib
