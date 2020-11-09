@@ -61,7 +61,7 @@ def get_co2eq_per_kwh():
 
     # Dividing co2eq by total_mw will give us kgco2eq/MW.
     # For the sake of simplicity, we just assume it'll remain constant for 1 hour, so with that magic, it's kgco2eq/mwh
-    # Since there's 1000 grams in 1 kg and 1000 watts in 1 Megawatt, the number is same for gco2eq/kwh
+    # Since there's 1000 grams in 1 kg and 1000 kilowatts in 1 Megawatt, the number is same for gco2eq/kwh
 
     response = {
         "zone": zone,
