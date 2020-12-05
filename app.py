@@ -33,6 +33,15 @@ def error(msg, code):
     return jsonify({"error": msg}), code
 
 
+@app.errorhandler(404)
+def not_found(e):
+
+    return (
+        jsonify({"error": "only /carbon-intensity/latest?zone=<zone> is supported"}),
+        404,
+    )
+
+
 @app.route("/carbon-intensity/latest")
 def get_co2eq_per_kwh():
 

@@ -2,8 +2,46 @@
 
 API server for pseudo-realtime production carbon intensity data in gCO2eq/kWh for any zone supported by https://github.com/tmrowco/electricitymap-contrib.
 
+## Installation and running
+
+### With Docker
+
+```
+docker run -p 80:80 ofpiyush/carbonintensity-api:stable
+```
+
+### Local
+
+The code has been teted working on Python `3.7.0`. It should work in compatible versions. You can use [pyenv](https://github.com/pyenv/pyenv#installation) to manage python versions
+
+1. Fork and clone this repository and submodules
+
+   Replace `<username>` with your github username.
+
+   ```
+   git clone --recurse-submodules git@github.com:<username>/carbonintensity-api
+   ```
+
+1. Install dependencies
+
+   Within your virtualenv
+
+   ```
+   pip install -r requirements.txt
+   pip install -r electricitymapcontrib/parsers/requirements.txt
+   ```
+
+1. Start the server
+   ```
+   python app.py
+   ```
+
+## Usage
+
+Change `http://localhost` to the host and port combo of your environment.
+
 ```bash
-curl 'http://localhost:5000/carbon-intensity/latest?zone=IN-KA'
+curl 'http://localhost/carbon-intensity/latest?zone=IN-KA'
 {
   "zone": "IN-KA",
   "carbonIntensity": 474,
