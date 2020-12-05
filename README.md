@@ -40,8 +40,6 @@ This project relies on `production` data from open source parsers available at h
 
 While production is a decent lens to guess CO2 emissions, api.electricitymap.org uses [better lenses](https://www.sciencedirect.com/science/article/pii/S2211467X19300549).
 
-If you're unsure, you probably don't need the paid API.
-
 ### If you want to make a lot of requests
 
 Right now, this project doesn't cache or save data from the data sources in any way. Each request you make refetches and parses data from the original source.
