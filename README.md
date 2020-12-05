@@ -50,6 +50,22 @@ curl 'http://localhost/carbon-intensity/latest?zone=IN-KA'
 }
 ```
 
+## Contributing
+
+1. Create an issue with the problem you're trying to solve or improvement you'd like to see.
+1. Fork and clone the repo.
+1. Use the local install guide above.
+1. Install dev requirements with:
+   ```
+   pip install -r dev.requirements.txt
+   ```
+1. Make your changes
+1. Run before committing
+   ```
+   black --exclude electricitymapcontrib .
+   ```
+1. Open a PR!
+
 ## Motivation
 
 This API server is meant to be a self-hosted, free drop-in replacement of https://api.electricitymap.org/v3/carbon-intensity/latest endpoint. ([Documentation](http://static.electricitymap.org/api/docs/index.html#live-carbon-intensity))
